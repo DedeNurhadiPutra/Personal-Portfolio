@@ -1,0 +1,82 @@
+ul#navbar li a.active {
+    color: white;
+}
+
+section {
+    padding-top: 5rem;
+}
+
+svg {
+    position: sticky;
+    z-index: 1;
+}
+
+.jumbotron {
+    padding-top: 7rem;
+    background-image: url(https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.jumbotron img {
+    position: sticky;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.jumbotron h1, .jumbotron p {
+    position: relative;
+    left: auto;
+    right: auto;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.p-kiri, .p-kanan {
+    opacity: 0;
+    transform: translate(-80px, 0);
+    transition: 1s;
+}
+
+.p-kanan {
+    transform: translate(80px, 0);
+}
+
+.p-kiri.p-muncul, .p-kanan.p-muncul {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+#gallery{
+    background-color: #e2edff;
+}
+
+.container .card-top, 
+.container .card-bot {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    transform: translate(0, -40px);
+}
+
+.container .card-top.muncul, 
+.container .card-bot.muncul{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+#contact {
+    opacity: 0;
+    transition: 0.5s ease-out;
+    transform: scale(0,0);
+}
+
+#contact.muncul{
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+footer *{
+    color: white;
+    font-weight: bold;
+}
