@@ -26,14 +26,16 @@ svg {
     overflow: hidden;
 }
 
-.jumbotron h1, .jumbotron p {
+.jumbotron h1,
+.jumbotron p {
     position: relative;
     left: auto;
     right: auto;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-.p-kiri, .p-kanan {
+.p-kiri,
+.p-kanan {
     opacity: 0;
     transform: translate(-80px, 0);
     transition: 1s;
@@ -43,40 +45,41 @@ svg {
     transform: translate(80px, 0);
 }
 
-.p-kiri.p-muncul, .p-kanan.p-muncul {
+.p-kiri.p-muncul,
+.p-kanan.p-muncul {
     opacity: 1;
-    transform: translate(0,0);
+    transform: translate(0, 0);
 }
 
-#gallery{
+#project {
     background-color: #e2edff;
 }
 
-.container .card-top, 
+.container .card-top,
 .container .card-bot {
     opacity: 0;
     transition: 0.5s ease-in-out;
     transform: translate(0, -40px);
 }
 
-.container .card-top.muncul, 
-.container .card-bot.muncul{
+.container .card-top.muncul,
+.container .card-bot.muncul {
     opacity: 1;
-    transform: translate(0,0);
+    transform: translate(0, 0);
 }
 
 #contact {
     opacity: 0;
     transition: 0.5s ease-out;
-    transform: scale(0,0);
+    transform: scale(0, 0);
 }
 
-#contact.muncul{
+#contact.muncul {
     opacity: 1;
-    transform: scale(1,1);
+    transform: scale(1, 1);
 }
 
-footer *{
+footer * {
     color: white;
     font-weight: bold;
 }

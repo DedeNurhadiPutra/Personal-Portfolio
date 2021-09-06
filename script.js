@@ -3,7 +3,7 @@
 const navbar = document.querySelector("#navbar");
 
 // 2. jika element dengan class/id navbar diklik
-navbar.addEventListener('click', function(e) {
+navbar.addEventListener('click', function (e) {
     // 3. maka ambil element apa yang diklik oleh user
     const targetNavbar = e.target;
 
@@ -29,57 +29,59 @@ navbar.addEventListener('click', function(e) {
 // Parallax
 
 // img mousemove
-$('.jumbotron img').on('mousemove', function(e){
-    centerX = $(this).width()/2;
-    centerY = $(this).height()/2;
+$('.jumbotron img').on('mousemove', function (e) {
+    centerX = $(this).width() / 2;
+    centerY = $(this).height() / 2;
 
     var moveX = centerX - e.offsetX;
     var moveY = centerY - e.offsetY;
     $(this).css({
-        'transform' : 'perspective(500px) rotateX(' + moveY/8 + 'deg) rotateY(' + moveX/8 + 'deg)'
+        'transform': 'perspective(500px) rotateX(' + moveY / 8 + 'deg) rotateY(' + moveX / 8 + 'deg)'
     });
 });
 
 // About
-$(window).on('load', function(){
+$(window).on('load', function () {
     $('.p-kiri').addClass('p-muncul');
     $('.p-kanan').addClass('p-muncul');
 });
 
 // scroll function
-$(window).scroll(function() {
+$(window).scroll(function () {
     var wScroll = $(this).scrollTop();
 
     // Jumbotron
     $('.jumbotron img').css({
-        'transform' : 'translate(0px, ' + wScroll/4 + '%)'
+        'transform': 'translate(0px, ' + wScroll / 4 + '%)'
     });
     $('.jumbotron h1').css({
-        left: wScroll/4 + '%'
+        left: wScroll / 4 + '%'
     });
     $('.jumbotron p').css({
-        right : wScroll/4 + '%'
+        right: wScroll / 4 + '%'
     });
 
-    // Gallery
-    if (wScroll > $('#gallery').offset().top - 200) {
-        $('.container .card-top').each(function(i){
-            setTimeout(function() {
-                $('.container .card-top').eq(i).addClass('muncul');},
-                500 * (i+1));
+    // Project
+    if (wScroll > $('#project').offset().top - 200) {
+        $('.container .card-top').each(function (i) {
+            setTimeout(function () {
+                    $('.container .card-top').eq(i).addClass('muncul');
+                },
+                500 * (i + 1));
         });
     }
 
-    if (wScroll > $('#gallery').offset().top) {
-        $('.container .card-bot').each(function(i){
-            setTimeout(function() {
-                $('.container .card-bot').eq(i).addClass('muncul');},
-                500 * (i+1));
+    if (wScroll > $('#project').offset().top) {
+        $('.container .card-bot').each(function (i) {
+            setTimeout(function () {
+                    $('.container .card-bot').eq(i).addClass('muncul');
+                },
+                500 * (i + 1));
         });
     }
 
     // Contact
-    if (wScroll > $('#contact').offset().top-500) {
+    if (wScroll > $('#contact').offset().top - 500) {
         $('#contact').addClass('muncul');
     }
 });
